@@ -1,11 +1,16 @@
 # iiyokoiyo
-[クリックして、どうぞ] 
+
+[クリックして、どうぞ] https://yaziumin.github.io/iiyokoiyo/
 
 要素はありません。
 
-大変申し訳ないのですが、PCのみ遊べます。（多分？）
+どの端末でも遊べます（多分？）
 
-参考(かなり〇クった)にさせて頂いた動画
+隠し演出があります。(画面上部の茶色い数字をある数字以上にすると、隠し演出となります)
+
+vscode/pythonで作成しました。少しcopilotも使用しました。
+
+参考にさせて頂いた動画
 
 (https://youtu.be/0g0L5iGKv9g?si=QyeN81W2jdhPZDBF)
 
