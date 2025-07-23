@@ -1,4 +1,4 @@
-# iiyokoiyo
+# tadanogame
 
 [クリックして、どうぞ] https://yaziumin.github.io/iiyokoiyo/
 
