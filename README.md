@@ -17,5 +17,3 @@ vscode/pythonで作成しました。少しcopilotも使用しました。
 参考にさせて頂いた動画
 
 (https://youtu.be/0g0L5iGKv9g?si=QyeN81W2jdhPZDBF)
-
-#野獣先輩 #YAJU&U #例のアレ #ゲーム
