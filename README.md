@@ -1,6 +1,6 @@
 # tadanogame
 
-[クリックして、どうぞ] https://yaziumin.github.io/iiyokoiyo/
+[クリックして下さい] https://yaziumin.github.io/iiyokoiyo/
 
 ※遊ぶ画面でマウスのカーソルが矢印に触れている場合、勝手に動いてしまいます。そこだけすみません。
 
