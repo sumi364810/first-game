@@ -2,6 +2,8 @@
 
 [クリックして下さい] https://yaziumin.github.io/iiyokoiyo/
 
+file:///C:/Users/hayat/%E7%B7%B4%E7%BF%92/web/my_game.html
+
 ※遊ぶ画面でマウスのカーソルが矢印に触れている場合、勝手に動いてしまいます。そこだけすみません。
 
 どの端末でも遊べます（pc推奨です。携帯だと多分かなりやりずらい）
