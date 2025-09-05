@@ -5,7 +5,7 @@ Gendai_INTERVAL=2
 GAME_OVER_DISPLAY_TIME=60
 START_SCENE="start"
 PLAY_SCENE="play"
-#現代アート先輩はリストの要素のため、以下が必要となる
+#Yはリストの要素のため、以下が必要となる
 class Gendai:
     def __init__(self,x,y):
         self.x=x
@@ -195,5 +195,6 @@ class App:
             self.draw_start_scene()
         elif self.current_scene==PLAY_SCENE:
             self.draw_play_scene()
+
 
 App()  
