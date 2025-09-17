@@ -6,7 +6,7 @@ GAME_OVER_DISPLAY_TIME=60
 START_SCENE="start"
 PLAY_SCENE="play"
 #Yはリストの要素のため、以下が必要となる
-class rakkabutu:
+class Rakkabutu:
     def __init__(self,x,y):
         self.x=x
         self.y=y
@@ -112,18 +112,18 @@ class App:
 
         #落下物の追加
         if pyxel.frame_count%rakkabutu_INTERVAL==0:
-            self.rakkabututati.append(rakkabutu(pyxel.rndi(0,SCREEN_WIDTH-8),0))
+            self.rakkabututati.append(Rakkabutu(pyxel.rndi(0,SCREEN_WIDTH-8),0))
 
         #落下物の落下
-        for rakkabutu in self.rakkabututati.copy():
-            rakkabutu.update()
+        for Rakkabutu in self.rakkabututati.copy():
+            Rakkabutu.update()
             #衝突
-            if (self.senpai_x<=rakkabutu.x<=self.senpai_x+8 and
-                self.senpai_y<=rakkabutu.y<=self.senpai_y+8):
+            if (self.senpai_x<=Rakkabutu.x<=self.senpai_x+8 and
+                self.senpai_y<=Rakkabutu.y<=self.senpai_y+8):
                 self.is_collision=True
             #画面外に出た落下物を削除
-            if rakkabutu.y>=SCREEN_HEIGHT:
-                self.rakkabututati.remove(rakkabutu)
+            if Rakkabutu.y>=SCREEN_HEIGHT:
+                self.rakkabututati.remove(Rakkabutu)
 
     def update(self):
         if self.current_scene==START_SCENE:
@@ -153,8 +153,8 @@ class App:
     def draw_play_scene(self):
         pyxel.cls(pyxel.COLOR_DARK_BLUE)
         #落下物
-        for rakkabutu in self.rakkabututati:
-            rakkabutu.draw()
+        for Rakkabutu in self.rakkabututati:
+            Rakkabutu.draw()
         #先輩
         pyxel.blt(self.senpai_x,self.senpai_y,0,16,0,16,16,pyxel.COLOR_YELLOW)
         # 仮想ボタンの描画
@@ -198,4 +198,5 @@ class App:
 
 
 App()  
+
 
