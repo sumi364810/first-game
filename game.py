@@ -1,12 +1,12 @@
 import pyxel
 SCREEN_WIDTH=160
 SCREEN_HEIGHT=120
-Gendai_INTERVAL=2
+rakkabutu_INTERVAL=2
 GAME_OVER_DISPLAY_TIME=60
 START_SCENE="start"
 PLAY_SCENE="play"
 #Yはリストの要素のため、以下が必要となる
-class Gendai:
+class rakkabutu:
     def __init__(self,x,y):
         self.x=x
         self.y=y
@@ -19,7 +19,7 @@ class Gendai:
 
 class App:
     def __init__(self):
-        #114 51の伏線
+        #隠しエンディングの伏線
         pyxel.init(SCREEN_WIDTH,SCREEN_HEIGHT,title="良い世　来い")
         self.number_1=0
         self.number_2=0
@@ -36,7 +36,7 @@ class App:
     def reset_play_scene(self):
         self.senpai_x=SCREEN_WIDTH//2-5
         self.senpai_y=SCREEN_HEIGHT*4//5
-        self.Gendais=[]
+        self.rakkabututati=[]
         self.is_collision=False
         self.number_1=0
         self.number_2=0
@@ -110,20 +110,20 @@ class App:
         if pyxel.btn(pyxel.KEY_UP):
             self.senpai_x = min(self.senpai_x + 6, SCREEN_WIDTH - 16)
 
-        #現代の追加
-        if pyxel.frame_count%Gendai_INTERVAL==0:
-            self.Gendais.append(Gendai(pyxel.rndi(0,SCREEN_WIDTH-8),0))
+        #落下物の追加
+        if pyxel.frame_count%rakkabutu_INTERVAL==0:
+            self.rakkabututati.append(rakkabutu(pyxel.rndi(0,SCREEN_WIDTH-8),0))
 
-        #現代アートの落下
-        for gendai in self.Gendais.copy():
-            gendai.update()
+        #落下物の落下
+        for rakkabutu in self.rakkabututati.copy():
+            rakkabutu.update()
             #衝突
-            if (self.senpai_x<=gendai.x<=self.senpai_x+8 and
-                self.senpai_y<=gendai.y<=self.senpai_y+8):
+            if (self.senpai_x<=rakkabutu.x<=self.senpai_x+8 and
+                self.senpai_y<=rakkabutu.y<=self.senpai_y+8):
                 self.is_collision=True
-            #画面外に出た現代を削除
-            if gendai.y>=SCREEN_HEIGHT:
-                self.Gendais.remove(gendai)
+            #画面外に出た落下物を削除
+            if rakkabutu.y>=SCREEN_HEIGHT:
+                self.rakkabututati.remove(rakkabutu)
 
     def update(self):
         if self.current_scene==START_SCENE:
@@ -152,9 +152,9 @@ class App:
 
     def draw_play_scene(self):
         pyxel.cls(pyxel.COLOR_DARK_BLUE)
-        #現代アート
-        for gendai in self.Gendais:
-            gendai.draw()
+        #落下物
+        for rakkabutu in self.rakkabututati:
+            rakkabutu.draw()
         #先輩
         pyxel.blt(self.senpai_x,self.senpai_y,0,16,0,16,16,pyxel.COLOR_YELLOW)
         # 仮想ボタンの描画
@@ -198,3 +198,4 @@ class App:
 
 
 App()  
+
